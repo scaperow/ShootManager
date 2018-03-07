@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+<MediaPlayer></MediaPlayer>
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/refresh" />
+
+        <Button
+            android:id="@+id/button_pause"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button_clear"
+            android:background="@drawable/pause" />
+
+        <ProgressBar
+            android:id="@+id/progress_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/progress_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button_reset"
+            android:layout_alignBottom="@+id/button_reset"
+            android:layout_toRightOf="@+id/progress_icon"
+            android:text="正在加载 ..."
+            android:textColor="#999999"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button_pause"
+            android:background="@drawable/reset" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#99CCCC"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="靶位"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="发数"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="环数"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="总环数"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="状态"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_clients"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:textAlignment="center" >
+    </ListView>
+
+</LinearLayout>
